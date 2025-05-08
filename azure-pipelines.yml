@@ -12,5 +12,12 @@ stages:
   - job: Build
     pool:
       vmImage: 'ubuntu-latest'
+      step:
+       task: DotNetCoreCLI@2
+       inputs:
+       azureSubscription: 'Azure subscription 1(04d7fefa-8573-42f4-ad43-de528eaa184e)'
+      command: 'test'
+
+
     
 
